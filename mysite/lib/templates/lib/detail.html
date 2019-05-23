@@ -17,7 +17,7 @@
 {% endfor %}
 </table>
 
-<form action="{% url 'addBook'%}" method="post" name="addBook">
+<form action="{% url 'lib:addBook'%}" method="post" name="addBook">
 	{% csrf_token %}
 	<p><span>name:</span><input type='text' name='name'></p>
 	<p><span>author:</span><input type='text' name='author'></p>
