@@ -25,3 +25,8 @@ def addBook(request):
 	temp_book.save()
 
 	return HttpResponseRedirect(reverse('lib:detail'))
+
+def deleteBook(request, book_id):
+	bookID = book_id
+	Book.objects.filter(id=bookID).delete()
+	return HttpResponseRedirect(reverse('lib:detail'))

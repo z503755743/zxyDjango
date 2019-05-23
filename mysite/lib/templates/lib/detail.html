@@ -13,6 +13,7 @@
     	<td>{{ book.author }}</td>
     	<td>{{ book.pub_house }}</td>
     	<td>{{ book.pub_date }}</td>
+    	<td><a href="{% url 'lib:deook' book.id %}">delete</a></td>
     </tr>
 {% endfor %}
 </table>
@@ -24,3 +25,4 @@
 	<p><span>publisher:</span><input type='text' name='pub_house'></p>
 	<input type="submit" value="add">
 </form>
+
